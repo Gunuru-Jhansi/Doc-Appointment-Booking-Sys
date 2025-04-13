@@ -6,7 +6,7 @@ const TopDoctors = () => {
   const { doctors } = useContext(AppContext);
 
   return (
-    <div className="flex flex-col items-center gap-4 my-16 text-gray-600">
+    <div className="flex flex-col items-center gap-4 my-16 text-gray-600 dark:text-white">
       <h1 className="text-3xl font-medium">Top Doctors to Book</h1>
       <p className="sm:w-1/3 text-center text-sm">
         Simply browse through our extensive list of trusted doctors.
@@ -17,17 +17,17 @@ const TopDoctors = () => {
             onClick={() => {
               navigate(`/appointment/${item._id}`);
             }}
-            className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
+            className="border border-blue-200 dark:border-black  rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
             key={index}
           >
-            <img className="bg-blue-100" src={item.image} alt="" />
+            <img className="bg-blue-100 dark:bg-gray-800" src={item.image} alt="" />
             <div className="p-4">
               <div className={`flex items-center gap-1 text-sm text-center ${item.available? "text-green-500" : "text-gray-500"} `}>
                 <p className={`w-2 h-2 ${item.available ? 'bg-green-600' :"bg-gray-600"}  rounded-full`}></p>
                 <p>{item.available? 'Available':"Not Available"}</p>
               </div> 
-              <p className="text-gray-900 text-lg font-medium">{item.name}</p>
-              <p className="text-gray-600 text-sm">{item.speciality}</p>
+              <p className="text-gray-900 text-lg font-medium dark:text-white">{item.name}</p>
+              <p className="text-gray-600 text-sm dark:text-gray-400">{item.speciality}</p>
             </div>
           </div>
         ))} 
@@ -37,7 +37,7 @@ const TopDoctors = () => {
           navigate("/doctors");
           scrollTo(0, 0);
         }}
-        className="bg-blue-100 text-gray-600 px-12 py-3 rounded-full mt-10"
+        className="bg-blue-100 dark:bg-gray-700 dark:text-white text-gray-600 px-12 py-3 rounded-full mt-10"
       >
         more
       </button>

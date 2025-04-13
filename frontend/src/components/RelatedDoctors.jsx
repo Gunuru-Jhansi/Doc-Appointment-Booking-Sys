@@ -17,8 +17,8 @@ const RelatedDoctors = ({ speciality, docId }) => {
   }, [doctors, speciality, docId]);
 
   return (
-    <div className="flex flex-col items-center gap-4 my-16 text-gray-600">
-      <h1 className="text-3xl font-medium">Top Doctors to Book</h1>
+    <div className="flex flex-col items-center dark:text-white gap-4 my-16 text-gray-600">
+      <h1 className="text-3xl font-medium ">Top Doctors to Book</h1>
       <p className="sm:w-1/3 text-center text-sm">
         Simply browse through our extensive list of trusted doctors.
       </p>
@@ -43,8 +43,8 @@ const RelatedDoctors = ({ speciality, docId }) => {
                   className={`w-2 h-2 ${item.available ? "bg-green-600" : "bg-gray-600"} rounded-full` }></p>
                 <p>{item.available ? "Available" : "Not Available"}</p>
               </div>
-              <p className="text-gray-900 text-lg font-medium">{item.name}</p>
-              <p className="text-gray-600 text-sm">{item.speciality}</p>
+              <p className="text-gray-900 text-lg font-medium dark:text-white">{item.name}</p>
+              <p className="text-gray-600 text-sm dark:text-gray-400">{item.speciality}</p>
             </div>
           </div>
         ))}
@@ -54,7 +54,7 @@ const RelatedDoctors = ({ speciality, docId }) => {
           navigate("/doctors");
           scrollTo(0, 0);
         }}
-        className="bg-blue-100 text-gray-600 px-12 py-3 rounded-full mt-10"
+        className="bg-blue-100 text-gray-600 dark:text-white dark:bg-gray-700 px-12 py-3 rounded-full mt-10"
       >
         more
       </button>

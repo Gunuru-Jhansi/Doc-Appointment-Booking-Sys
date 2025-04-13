@@ -5,6 +5,7 @@ import { assets } from '../assets/assets'
 import RelatedDoctors from '../components/RelatedDoctors'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import ThemeToggle from '../components/ThemeToggle'
 
  
 const Appointment = () => {
@@ -135,38 +136,41 @@ const Appointment = () => {
 
   return docInfo && (
     <div>
+      <div>
+        <ThemeToggle/>
+      </div>
        {/* -------------Doctor details----------- */}
        <div className='flex flex-col sm:flex-row gap-4'>
       <div>
-        <img className='bg-primary w-full sm:max-w-72 rounded-lg' src={docInfo.image} alt="" />
+        <img className='bg-primary dark:bg-gray-700 w-full sm:max-w-72 rounded-lg' src={docInfo.image} alt="" />
       </div>
-      <div className='flex-1 border border-gray-400 rounded-lg p-8 py-7 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0'>
+      <div className='flex-1 border border-gray-400 rounded-lg p-8 py-7 dark:bg-gray-800 bg-white mx-2 sm:mx-0 mt-[-80px] sm:mt-0'>
         {/* -------------Doc Info {name,degree,experience----------} */}
-        <p className='flex items-center gap-2 text-2xl font-medium text-gray-900'>
+        <p className='flex items-center gap-2 text-2xl font-medium text-gray-900 dark:text-white '>
           {docInfo.name} 
           <img className='w-5' src={assets.verified_icon} alt="" /> 
         </p>
       
-      <div className='flex items-center gap-2 text-sm mt-1 text-gray-600'>
+      <div className='flex items-center gap-2 text-sm mt-1 text-gray-600 dark:text-gray-400'>
         <p>{docInfo.degree}-{docInfo.speciality}</p>
         <button className='py-0.5 px-2 border text-xs rounded-full'>{docInfo.experience}</button>
       </div>
       {/* ----------doctor about-------- */}
       <div>
-        <p className='flex items-center gap-1 text-sm font-medium text-gray-900 mt-3'>
+        <p className='flex items-center gap-1 text-sm font-medium text-gray-900 dark:text-white mt-3'>
           About 
           <img src={assets.info_icon} alt="" />
           
         </p>
-        <p className='text-sm text-gray-500 max-w-md mt-1'>
+        <p className='text-sm text-gray-500 dark:text-gray-300 max-w-md mt-1'>
         {console.log("About content:", docInfo.about)}
         {docInfo.about || 'No about info found'}      </p>
 
         
         
         </div>
-      <p className='text-gray-500 font-medium mt-4'>
-        Appointment Fee : <span className='text-gray-600'>{currencySymbol}{docInfo.fees}</span>
+      <p className='text-gray-500 dark:text-white font-medium mt-4'>
+        Appointment Fee : <span className='text-gray-600 dark:text-gray-300'>{currencySymbol}{docInfo.fees}</span>
       </p>
     </div>
     </div>
@@ -176,7 +180,7 @@ const Appointment = () => {
       <div className='flex gap-3 items-center w-full overdlow-x-scroll mt-4'>
       {
         docSlots.length && docSlots.map((item,index)=>(
-              <div onClick={()=>setSlotIndex(index)} className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${slotIndex===index?'bg-primary text-white':'border border-gray-300'}`} key={index}>
+              <div onClick={()=>setSlotIndex(index)} className={`text-center py-6 min-w-16 rounded-full cursor-pointer ${slotIndex===index?'bg-primary dark:bg-secondary dark:text-black text-white':'border border-gray-300'}`} key={index}>
                 <p>{item[0] && dayOfWeek[item[0].datetime.getDay()]}</p>
                 <p>{item[0] && item[0].datetime.getDate()}</p>
               </div>
@@ -185,12 +189,12 @@ const Appointment = () => {
     </div>
     <div className='flex items-center gap-3 w-full overflow-x-scroll mt-4'>
       {docSlots.length&& docSlots[slotIndex].map((item,index)=>(
-        <p onClick={()=>setSlotTime(item.time)} className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${item.time===slotTime? 'bg-primary text-white': 'text-gray-500 border border-gray-300'}`} key={index}>
+        <p onClick={()=>setSlotTime(item.time)} className={`text-sm font-light flex-shrink-0 px-5 py-2 rounded-full cursor-pointer ${item.time===slotTime? 'bg-primary dark:bg-secondary dark:font-medium dark:text-black text-white': 'text-gray-500 border border-gray-300'}`} key={index}>
           {item.time.toLowerCase()}
         </p>
       ))}
     </div>
-    <button onClick={bookAppointment} className='bg-primary text-white text-sm font-light px-14 py-3 rounded-full my-6'>Book an Appointment</button>
+    <button onClick={bookAppointment} className='bg-primary dark:bg-secondary dark:text-black dark:font-medium text-white text-sm font-light px-14 py-3 rounded-full my-6'>Book an Appointment</button>
     </div>
     {/* ---------Listing related Doctors -------*/}
     <RelatedDoctors docId={docId} speciality={docInfo.speciality}/>

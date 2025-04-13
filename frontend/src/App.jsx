@@ -10,11 +10,13 @@ import Contact from './pages/Contact'
 import MyProfile from './pages/MyProfile'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import {ToastContainer,toast} from 'react-toastify'
+import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const App = () => {
   return (
+  
+    <div className='min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300'>
     <div className='mx-4 sm:mx-[10%]'>
       <ToastContainer/>
       <Navbar/>
@@ -31,6 +33,7 @@ const App = () => {
           <Route path="*" element={<div>Page Not Found</div>} />
        </Routes>
        <Footer/>
+    </div>
     </div>
   )
 }
