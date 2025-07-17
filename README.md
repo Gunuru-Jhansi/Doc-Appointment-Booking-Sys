@@ -64,7 +64,7 @@ DocEase is a full-stack AI-powered healthcare platform that allows users to:
 
 ### 1. Clone the Repo
 
-git clone [https://github.com/your-username/docease.git](https://github.com/Gunuru-Jhansi/Doc-Appointment-Booking-Sys.git)
+git clone [https://github.com/Gunuru-Jhansi/Doc-Appointment-Booking-Sys.git](https://github.com/Gunuru-Jhansi/Doc-Appointment-Booking-Sys.git)
 
 cd docease
 
