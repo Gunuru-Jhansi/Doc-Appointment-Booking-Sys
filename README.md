@@ -64,17 +64,20 @@ DocEase is a full-stack AI-powered healthcare platform that allows users to:
 
 ### 1. Clone the Repo
 
-git clone https://github.com/your-username/docease.git
+git clone [https://github.com/your-username/docease.git](https://github.com/Gunuru-Jhansi/Doc-Appointment-Booking-Sys.git)
+
 cd docease
 
 
 ### 2. Setup Environment Variables
+
 Create a .env file in both backend/ and frontend/ folders.
 
 Frontend .env
+```bach
 VITE_BACKEND_URL=https://docease-ca2b.onrender.com
 VITE_RAZORPAY_KEY=your_razorpay_public_key
-
+```
 backend .env
 ```bash
 PORT=5000
