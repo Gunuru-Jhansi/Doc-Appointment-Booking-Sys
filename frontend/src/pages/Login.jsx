@@ -4,6 +4,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import ThemeToggle from "../components/ThemeToggle";
+import { Eye,EyeOff } from "lucide-react";
+
 
 const Login = () => {
   const { backendUrl, token, setToken } = useContext(AppContext);
@@ -12,6 +14,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const toggleShow = () => setShowPassword((prev) => !prev);
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -24,6 +29,7 @@ const Login = () => {
         });
         if (data.success) {
           localStorage.setItem("token", data.token);
+          localStorage.setItem("userId", data.user._id);
           setToken(data.token);
         } else {
           toast.error(data.message);
@@ -35,6 +41,7 @@ const Login = () => {
         });
         if (data.success) {
           localStorage.setItem("token", data.token);
+          localStorage.setItem("userId", data.user._id);
           setToken(data.token);
         } else {
           toast.error(data.message);
@@ -91,13 +98,22 @@ const Login = () => {
           </div>
           <div className="w-full">
             <p>Password</p>
+            <div className="relative mt-1">
             <input
-              className="border dark:bg-gray-500 border-zinc-300 rounded w-full p-2 mt-1"
-              type="password"
+              className="border dark:bg-gray-500 border-zinc-300 rounded w-full p-2 pr-10"
+              type={showPassword?"text":"password"}
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               required
             />
+            <button
+          type="button"
+          onClick={toggleShow}
+          className="absolute inset-y-0 right-0 flex items-center px-3 text-white-500 hover:text-black focus:outline-none"
+        >
+          {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+        </button>
+        </div>
           </div>
           <button
             type="submit"

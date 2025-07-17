@@ -2,6 +2,8 @@ import doctorModel from "../models/doctormodel.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import appointmentModel from "../models/appointmentModel.js";
+import { v2 as cloudinary } from 'cloudinary';
+import fs from 'fs'
 
 const changeAvailability = async (req, res) => {
   try {
@@ -157,18 +159,73 @@ const doctorProfile = async (req, res) => {
 //API  to update doctor profile from doctor Panel
 const updateDoctorProfile = async (req, res) => {
   try {
-    const { docId, fees, address, available } = req.body;
+    console.log('updateDoctorProfile body:', req.body);
 
-    await doctorModel.findByIdAndUpdate(docId, { fees, address, available });
-    res.json({ success: true, message: "Profile Update" });
+    const { docId, fees, address, available, name, image } = req.body;
+
+    if (!docId) {
+      return res.status(400).json({ success: false, message: "Missing docId in request body" });
+    }
+
+    const updateFields = {};
+
+    if (fees !== undefined) updateFields.fees = fees;
+    if (address !== undefined) updateFields.address = address;
+    if (available !== undefined) updateFields.available = available;
+    if (name) updateFields.name = name;
+    if (image) updateFields.image = image;
+
+    await doctorModel.findByIdAndUpdate(docId, updateFields);
+    res.json({ success: true, message: "Profile Updated" });
   } catch (error) {
-    console.log(error);
-    res.json({ success: false, message: error.message });
+    console.error('Error in updateDoctorProfile:', error);
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
+const uploadDoctorImage = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ success: false, message: "No image uploaded" });
+    }
+
+    // Upload to Cloudinary
+    const result = await cloudinary.uploader.upload(req.file.path, {
+      folder: "doctor_profiles",
+    });
+
+    // Delete local file (optional)
+    fs.unlinkSync(req.file.path);
+
+    res.json({ success: true, imageUrl: result.secure_url });
+  } catch (error) {
+    console.error("Cloudinary upload error:", error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+
+
+
+// API to get doctor by ID (for appointment page)
+const getDoctorById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const doctor = await doctorModel.findById(id).select("-password");
+    if (!doctor) {
+      return res.status(404).json({ success: false, message: "Doctor not found" });
+    }
+    res.json({ success: true, doctor });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+
 export {
   changeAvailability,
+  getDoctorById,
   doctorDashboard,
   appointmentCancel,
   appointmentComplete,
@@ -177,4 +234,5 @@ export {
   appointmentDoctor,
   doctorProfile,
   updateDoctorProfile,
+  uploadDoctorImage,
 };

@@ -7,8 +7,8 @@ const Footer = () => {
       <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm '>
         {/* ----------Left Section----------- */}
         <div>
-            <img className='mb-5 w-32 h-12' src={assets.logobg1} alt="" />
-            <p className='w-full md:w-2/3 text-gray-600 dark:text-gray-400 leading-6'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus neque sed praesentium optio odio adipisci quam illum, dolorum ipsa nam voluptate sunt pariatur atque qui ipsum eligendi quod, minima iure.</p>
+            <img className='mb-5 w-32 h-28' src={assets.tilo} alt="" />
+            <p className='w-full md:w-2/3 text-gray-600 dark:text-gray-400 leading-6'>Lorem ipsum dolor, dolorum ipsa nam voluptate sunt pariatur atque qui ipsum eligendi quod, minima iure.</p>
         </div>
         {/* ----------Center Section----------- */}
         <div>

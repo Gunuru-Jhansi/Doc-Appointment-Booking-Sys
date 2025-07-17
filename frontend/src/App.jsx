@@ -8,10 +8,12 @@ import Login from './pages/Login'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import MyProfile from './pages/MyProfile'
+import DoctorReview from './pages/DoctorReview'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Predictor from './pages/Predictor'
 
 const App = () => {
   return (
@@ -29,7 +31,9 @@ const App = () => {
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/my-profile' element={<MyProfile/>}/>
           <Route path='/my-appointments' element={<MyAppointments/>}/>
+          <Route path='/predictor' element={<Predictor/>}/>
           <Route path='/appointment/:docId' element={<Appointment/>}/>
+          <Route path='/review/:doctorId' element={<DoctorReview/>}/>
           <Route path="*" element={<div>Page Not Found</div>} />
        </Routes>
        <Footer/>

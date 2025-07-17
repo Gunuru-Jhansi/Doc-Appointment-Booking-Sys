@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken'
 
 const authDoctor=async(req,res,next)=>{
 
-    try {
+    try { 
 
         const {dtoken} = req.headers
         if(!dtoken){

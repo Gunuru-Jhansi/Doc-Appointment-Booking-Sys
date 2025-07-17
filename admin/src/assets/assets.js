@@ -12,8 +12,10 @@ import appointments_icon from './appointments_icon.svg'
 import earning_icon from './earning_icon.svg'
 import patients_icon from './patients_icon.svg'
 import logo from './crop.png'
+import tilo from './tilo.png'
 export const assets = {
     add_icon,
+    tilo,
     admin_logo,
     appointment_icon,
     cancel_icon,

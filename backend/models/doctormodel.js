@@ -13,7 +13,9 @@ const doctorSchema=new mongoose.Schema({
     fees:{type:Number,required:true},
     address:{type:Object,required:true},
     date:{type:Number,required:true},
-    slots_booked:{type:Object,default:{} }
+    slots_booked:{type:Object,default:{}},
+    averageRating:{type:Number,default:0},
+    totalReviews:{type:Number,default:0}
 
 },{minimize:false})
 

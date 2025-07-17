@@ -19,14 +19,23 @@ const DoctorsList = () => {
         {
           doctors.map((item,index)=>(
             <div className='border border-indigo-200 rounded-xl max-w-56 overflow-hidden cursor-pointer group' key={index}>
-
-              <img className='bg-indigo-50 group-hover:bg-primary transition-all duration-500' src={item.image} alt="" />
+              <img className='bg-indigo-50 group-hover:bg-blue-200 transition-all duration-500' src={item.image} alt="" />
               <div className='p-4'>
                 <p className='text-neutral-800 text-lg font-medium'>{item.name}</p>
                 <p className='text-zinc-600 text-sm'>{item.speciality}</p>
                 <div className='mt-2 flex items-center gap-1 text-sm'>
                   <input onChange={()=>changeAvailability(item._id)} type="checkbox" checked={item.available} />
                   <p className=''>Available</p>
+
+                </div>
+                <div className='mt-2 flex items-center gap-1 text-sm'>
+                  <p className='text-zinc-600 text-sm'>{item.totalReviews} Reviews</p>
+                  <br/>
+                  <p className='text-zinc-600 text-sm'>{item.averageRating} Rating</p>
+                  <br/>
+
+                  
+
 
                 </div>
               </div>
