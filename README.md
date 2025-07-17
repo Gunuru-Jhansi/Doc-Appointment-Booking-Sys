@@ -76,15 +76,16 @@ VITE_BACKEND_URL=https://docease-ca2b.onrender.com
 VITE_RAZORPAY_KEY=your_razorpay_public_key
 
 backend .env
+```bash
 PORT=5000
 MONGO_URL=your_mongo_connection
 JWT_SECRET=your_jwt_secret
 OPENAI_API_KEY=your_openai_key
 RAZORPAY_KEY_ID=your_razorpay_key
 RAZORPAY_KEY_SECRET=your_razorpay_secret
-CLOUDINARY_NAME=your_cloudinary_name
-CLOUDINARY_API_KEY=your_cloudinary_api
-CLOUDINARY_API_SECRET=your_cloudinary_secret_key
+CLOUDINARY_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
 ---
 
 
