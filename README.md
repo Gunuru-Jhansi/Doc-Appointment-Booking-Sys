@@ -1,14 +1,32 @@
-# 🩺 DocEase - Doctor Appointment Booking System
+# DocEase - Doctor Appointment & Disease Prediction Platform
 
-A full-stack appointment booking system for doctors and patients. Built with React, Node.js, Express, MongoDB, and Razorpay for secure online payments.
+DocEase is a full-stack AI-powered healthcare platform that allows users to:
 
----
+- Book doctor appointments online
+- View doctors by specialty and location
+- Chat with an AI chatbot to get help or automate tasks
+- Predict diseases from symptoms using a trained ML model
 
 ## 🔗 Live Links
 
 - **Frontend (User Panel)**: [https://your-frontend-url.onrender.com](https://docease-frontend.onrender.com)
 - **Admin Panel**: [https://your-admin-url.onrender.com](https://docease-admin.onrender.com)
 - **Backend API**: [https://docease-ca2b.onrender.com]( https://docease-ca2b.onrender.com)
+- **ML server**:[https://docease-mlserver.onrender.com](https://docease-mlserver.onrender.com)
+
+---
+
+### 🏗️ Tech Stack
+
+| Layer       | Technology                                 |
+|-------------|--------------------------------------------|
+| Frontend    | React.js + Vite + Tailwind CSS             |
+| Backend     | Node.js + Express + MongoDB                |
+| ML Server   | Python + Flask + scikit-learn              |
+| Auth & Pay  | JWT, Razorpay Integration                  |
+| Map         | Leaflet.js + OpenStreetMap + Overpass API  |
+| Deployment  | Render.com                                 |
+| AI          | OpenAI API                                 |
 
 ---
 
@@ -17,27 +35,30 @@ A full-stack appointment booking system for doctors and patients. Built with Rea
 ### 👨‍⚕️ For Doctors
 - View, complete, and cancel appointments
 - View earnings and dashboard stats
+- Update their profile icons ,name ,address and appointment fees.
 
 ### 🧑‍💻 For Admin
 - Manage doctors and their availability
 - View all appointments and dashboard
 
 ### 🧑‍🤝‍🧑 For Patients
-- Book appointments with available doctors
-- View and cancel upcoming appointments
+- SignUp , login and Manage profiles
+- Book, View and cancel appointments
+- Show nearby hospitals and clinics in Map based on radius 
 - Online payments via Razorpay
+- Review & Rate the doctor once to let others know their experience
+- Prediction of possible Diseases and recommendation of respective doctors using ML model
+- A chatBot to one-to-one assistance of booking,viewing,cancelling the appointments and general FAQs
+- Filtering of doctors based on speciality and location 
+
+### 🧠 ML Disease Predictor
+- Inputs: list of symptoms
+- Output: predicted diseases (multi-label)
+- Trained on 130+ symptoms, 40+ diseases
 
 ---
 
-## ⚙️ Tech Stack
 
-- **Frontend**: React, Tailwind CSS, React Router
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Payment Gateway**: Razorpay
-- **Deployment**: Render.com
-
----
 
 ## 🛠️ Setup Instructions
 
@@ -54,17 +75,25 @@ Frontend .env
 VITE_BACKEND_URL=https://docease-ca2b.onrender.com
 VITE_RAZORPAY_KEY=your_razorpay_public_key
 
-Backend .env
+backend .env
 PORT=5000
-MONGODB_URL=your_mongodb_connection_string
+MONGO_URL=your_mongo_connection
 JWT_SECRET=your_jwt_secret
-RAZORPAY_KEY_ID=your_key_id
-RAZORPAY_KEY_SECRET=your_key_secret
+OPENAI_API_KEY=your_openai_key
+RAZORPAY_KEY_ID=your_razorpay_key
+RAZORPAY_KEY_SECRET=your_razorpay_secret
+CLOUDINARY_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_api
+CLOUDINARY_API_SECRET=your_cloudinary_secret_key
+---
+
+
 
 ### 3. Run Locally
 
 ###  Folder Structure
 /frontend        → React frontend (Vite)
-/admin           → Admin panel (optional if separated)
+/admin           → Admin panel
 /backend         → Node.js backend
+/ML_server       → FLask backend , model of the predictor
 
