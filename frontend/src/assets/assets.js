@@ -44,7 +44,6 @@ import Banner_Doc from './Banner_Doc.png'
 import FDoc1 from './FemaleDoc1.png'
 import Header_Doc from './Header_Docs.png'
 import GP1 from './GP1.png'
-import header from './Header.png'
 import icons from './icons.png'
 import tilo from './tilo.png'
 import icon_rem from './icon_rem.png'
@@ -54,7 +53,6 @@ export const assets = {
     tilo,
     icon_rem,
     Banner_Doc,
-    header,
     icons,
     GP1,
     FDoc1,
