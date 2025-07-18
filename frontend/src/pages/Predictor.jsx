@@ -210,7 +210,7 @@ export default function Predictor() {
     }
 
     setLoading(true);
-    fetch("http://localhost:5000/predict", {
+    fetch(`${import.meta.env.VITE_ML_SERVER_URL}/predict`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ symptoms: selectedSymptoms }),
