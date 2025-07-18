@@ -9,9 +9,9 @@ DocEase is a full-stack AI-powered healthcare platform that allows users to:
 
 ## 🔗 Live Links
 
-- **Frontend (User Panel)**: [https://your-frontend-url.onrender.com](https://docease-frontend.onrender.com)
-- **Admin Panel**: [https://your-admin-url.onrender.com](https://docease-admin.onrender.com)
-- **Backend API**: [https://docease-ca2b.onrender.com]( https://docease-ca2b.onrender.com)
+- **Frontend (User Panel)**: [https://docease-frontend.onrender.com](https://docease-frontend.onrender.com)
+- **Admin Panel**: [https://docease-admin.onrender.com](https://docease-admin.onrender.com)
+- **Backend API**: [https://docease-backend-hy9z.onrender.com](https://docease-backend-hy9z.onrender.com)
 - **ML server**:[https://docease-mlserver.onrender.com](https://docease-mlserver.onrender.com)
 
 ---
