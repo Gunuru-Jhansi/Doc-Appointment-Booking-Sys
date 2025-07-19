@@ -49,7 +49,8 @@ DocEase is a full-stack AI-powered healthcare platform that allows users to:
 - Review & Rate the doctor once to let others know their experience
 - Prediction of possible Diseases and recommendation of respective doctors using ML model
 - A chatBot to one-to-one assistance of booking,viewing,cancelling the appointments and general FAQs
-- Filtering of doctors based on speciality and location 
+- Filtering of doctors based on speciality and location
+- Dark/Light Mode Toggle
 
 ### 🧠 ML Disease Predictor
 - Inputs: list of symptoms
