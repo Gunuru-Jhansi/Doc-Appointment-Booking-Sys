@@ -98,7 +98,27 @@ CLOUDINARY_API_SECRET=
 
 ###  Folder Structure
 /frontend        → React frontend (Vite)
+
 /admin           → Admin panel
+
 /backend         → Node.js backend
+
 /ML_server       → FLask backend , model of the predictor
+
+###4. Screenshots 
+
+prediction page : <img width="1276" height="587" alt="predict" src="https://github.com/user-attachments/assets/50a24013-db91-4d17-9d0a-98dda40d887e" />
+
+chatbot : <img width="1366" height="593" alt="chatbot" src="https://github.com/user-attachments/assets/44697e75-9b10-48da-8b86-96b2cfe4f7c6" />
+
+Map integration : <img width="1288" height="598" alt="map" src="https://github.com/user-attachments/assets/83f447d6-87e9-49d2-bcf7-20e6187c79e3" />
+
+Doctor Dashboard : <img width="1366" height="596" alt="doc_ ro" src="https://github.com/user-attachments/assets/825b1bc9-1f0b-4203-b7d5-866d94e1d31c" />
+
+Filterin Doctors By speciality and location : <img width="1267" height="577" alt="doctor" src="https://github.com/user-attachments/assets/51d9941d-5771-46d8-b575-65ee1f9af842" />
+
+
+
+
+
 
