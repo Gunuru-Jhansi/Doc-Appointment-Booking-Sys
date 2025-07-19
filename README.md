@@ -118,6 +118,7 @@ Doctor Dashboard : <img width="1366" height="596" alt="doc_ ro" src="https://git
 
 Filterin Doctors By speciality and location : <img width="1267" height="577" alt="doctor" src="https://github.com/user-attachments/assets/51d9941d-5771-46d8-b575-65ee1f9af842" />
 
+Light Mode : <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/d3988c90-2ee6-438e-be1f-5ee075fa3153" />
 
 
 
