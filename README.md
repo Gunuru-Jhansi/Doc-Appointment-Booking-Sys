@@ -112,13 +112,18 @@ prediction page : <img width="1276" height="587" alt="predict" src="https://gith
 
 chatbot : <img width="1366" height="593" alt="chatbot" src="https://github.com/user-attachments/assets/44697e75-9b10-48da-8b86-96b2cfe4f7c6" />
 
-Map integration : <img width="1288" height="598" alt="map" src="https://github.com/user-attachments/assets/83f447d6-87e9-49d2-bcf7-20e6187c79e3" />
+Map integration : <img width="1253" height="577" alt="map" src="https://github.com/user-attachments/assets/c52f0216-eb40-4024-aca1-23adbd28b47b" />
 
 Doctor Dashboard : <img width="1366" height="596" alt="doc_ ro" src="https://github.com/user-attachments/assets/825b1bc9-1f0b-4203-b7d5-866d94e1d31c" />
 
-Filterin Doctors By speciality and location : <img width="1267" height="577" alt="doctor" src="https://github.com/user-attachments/assets/51d9941d-5771-46d8-b575-65ee1f9af842" />
+Filterin Doctors By speciality and location : <img width="1283" height="576" alt="doctor" src="https://github.com/user-attachments/assets/f21b2026-a4ea-4f56-af7a-e1362b78feb9" />
 
 Light Mode : <img width="1302" height="578" alt="light" src="https://github.com/user-attachments/assets/be59a803-2593-4469-9239-6232b324533f" />
+
+Review Page: <img width="1125" height="577" alt="review" src="https://github.com/user-attachments/assets/7c243651-43de-4464-a0d8-c90d34f8945f" />
+
+Slots Page : <img width="871" height="576" alt="slot" src="https://github.com/user-attachments/assets/921ee16d-b616-42e0-80f1-07e63d9341cf" />
+
 
 
 
